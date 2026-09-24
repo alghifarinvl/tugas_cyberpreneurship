@@ -13,14 +13,16 @@
     padding: 40px 20px;
     color: #e2e8f0;
   }
-  .card {
+  .container {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .header {
     background: #1e293b;
     border: 1px solid #334155;
     border-radius: 16px;
-    padding: 40px 32px;
-    max-width: 480px;
-    width: 100%;
-    margin: 0 auto 20px auto;
+    padding: 28px 32px;
+    margin-bottom: 20px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
   }
   .label {
@@ -32,59 +34,16 @@
   }
   h1 {
     font-size: 24px;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     color: #f8fafc;
-  }
-  h2 {
-    font-size: 15px;
-    color: #94a3b8;
-    margin: 0 0 12px 4px;
-    font-weight: 600;
-  }
-  .info {
-    margin-bottom: 28px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #334155;
   }
   .info p {
-    font-size: 15px;
+    font-size: 14px;
     color: #cbd5e1;
-    margin-bottom: 4px;
+    margin-bottom: 2px;
   }
-  .info p strong {
-    color: #f8fafc;
-  }
-  .files {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  a.file-link {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 14px 16px;
-    background: #0f172a;
-    border: 1px solid #334155;
-    border-radius: 10px;
-    text-decoration: none;
-    color: #f1f5f9;
-    font-size: 15px;
-    font-weight: 500;
-    transition: border-color 0.15s ease, transform 0.15s ease;
-  }
-  a.file-link:hover {
-    border-color: #64748b;
-    transform: translateY(-1px);
-  }
-  .icon {
-    font-size: 20px;
-  }
+  .info p strong { color: #f8fafc; }
 
-  .container {
-    max-width: 480px;
-    margin: 0 auto;
-  }
   .list {
     background: #1e293b;
     border: 1px solid #334155;
@@ -119,26 +78,16 @@
 </style>
 </head>
 <body>
-
-  <div class="card">
-    <div class="label">Tugas Mata Kuliah</div>
-    <h1>Cyberpreneurship</h1>
-    <div class="info">
-      <p><strong>Nama:</strong> Alghifari</p>
-      <p><strong>NIM:</strong> 2412501716</p>
-    </div>
-    <div class="files">
-      <a class="file-link" href="Alghifari_2412501716_Cyberpreneurship.pdf" target="_blank">
-        <span class="icon">📄</span> Buka file PDF
-      </a>
-      <a class="file-link" href="Alghifari_2412501716_Cyberpreneurship.docx" target="_blank">
-        <span class="icon">📝</span> Buka file Word
-      </a>
-    </div>
-  </div>
-
   <div class="container">
-    <h2>Rangkuman Per Pertemuan</h2>
+    <div class="header">
+      <div class="label">Tugas Mata Kuliah</div>
+      <h1>Cyberpreneurship</h1>
+      <div class="info">
+        <p><strong>Nama:</strong> Alghifari</p>
+        <p><strong>NIM:</strong> 2412501716</p>
+      </div>
+    </div>
+
     <div class="list">
 
       <a class="pertemuan" href="pertemuan1.pdf" target="_blank">
@@ -154,6 +103,5 @@
 
     </div>
   </div>
-
 </body>
 </html>
