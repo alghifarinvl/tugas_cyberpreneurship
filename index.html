@@ -10,10 +10,10 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background: #241209;
     color: #f3e6d8;
+    min-height: 100vh;
   }
   a { color: inherit; }
-
-  /* ===== NAVBAR ===== */
+ 
   nav {
     display: flex;
     align-items: center;
@@ -31,21 +31,21 @@
     font-weight: 600;
     padding-bottom: 4px;
   }
-  .nav-links a:hover { color: #f8ede0; border-bottom: 2px solid #6b1e2c; }
-
-  /* ===== HERO / PROFILE ===== */
+  .nav-links a:hover, .nav-links a.active { color: #f8ede0; border-bottom: 2px solid #6b1e2c; }
+ 
   .hero {
     position: relative;
     padding: 60px 40px;
     background: linear-gradient(135deg, #2b1810, #4a1420);
     overflow: hidden;
+    min-height: calc(100vh - 73px);
   }
   .hero-photo-wide {
     position: absolute;
     inset: 0;
     background: url('foto-backround.jpg') center/cover;
     opacity: 0.35;
-}
+  }
   .hero-content {
     position: relative;
     display: flex;
@@ -59,13 +59,9 @@
     width: 160px;
     height: 160px;
     border-radius: 16px;
-    background: #6b1e2c;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 56px;
-    font-weight: 700;
-    color: #f8ede0;
+    background-image: url('foto-profil.jpg');
+    background-size: cover;
+    background-position: center;
     border: 3px solid #d9a679;
     flex-shrink: 0;
   }
@@ -77,68 +73,7 @@
   .hero-info .field { display: flex; gap: 8px; margin-bottom: 6px; font-size: 15px; }
   .hero-info .field .k { color: #d9a679; min-width: 100px; }
   .hero-info .field .v { color: #f3e6d8; }
-
-  /* ===== SECTIONS ===== */
-  section { max-width: 720px; margin: 0 auto; padding: 60px 20px; }
-  section h2 {
-    font-size: 24px;
-    color: #f8ede0;
-    margin-bottom: 24px;
-    text-align: center;
-  }
-
-  /* Tugas list */
-  .list {
-    background: #3a2117;
-    border: 1px solid #5c3a26;
-    border-radius: 16px;
-    padding: 8px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-  }
-  .pertemuan {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 16px 20px;
-    border-radius: 10px;
-    text-decoration: none;
-    color: #f3e6d8;
-  }
-  .pertemuan:hover { background: #6b1e2c; }
-  .pertemuan + .pertemuan { border-top: 1px solid #5c3a26; }
-  .p-left { display: flex; align-items: center; gap: 14px; }
-  .p-num {
-    width: 36px; height: 36px;
-    background: #6b1e2c;
-    border-radius: 8px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 14px; font-weight: 700;
-    color: #f8ede0;
-    flex-shrink: 0;
-  }
-  .p-title { font-size: 15px; font-weight: 500; }
-  .p-sub { font-size: 12px; color: #c9a68a; margin-top: 2px; }
-  .p-icon { font-size: 18px; color: #d9a679; flex-shrink: 0; }
-
-  /* Sosmed */
-  .sosmed-list { display: flex; flex-direction: column; gap: 12px; }
-  .sosmed-link {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 16px 20px;
-    background: #3a2117;
-    border: 1px solid #5c3a26;
-    border-radius: 12px;
-    text-decoration: none;
-    color: #f3e6d8;
-    font-size: 15px;
-    font-weight: 500;
-  }
-  .sosmed-link:hover { border-color: #d9a679; background: #6b1e2c; }
-  .sosmed-icon { font-size: 20px; }
-
+ 
   footer {
     text-align: center;
     padding: 30px;
@@ -146,7 +81,7 @@
     font-size: 13px;
     border-top: 1px solid #3a2117;
   }
-
+ 
   @media (max-width: 640px) {
     nav { padding: 16px 20px; flex-direction: column; gap: 12px; }
     .hero { padding: 40px 20px; }
@@ -156,20 +91,20 @@
 </style>
 </head>
 <body>
-
+ 
   <nav>
     <div class="logo">Portofolio</div>
     <ul class="nav-links">
-      <li><a href="#profile">Profile</a></li>
-      <li><a href="#tugas">Tugas</a></li>
-      <li><a href="#sosmed">Sosmed</a></li>
+      <li><a href="index.html" class="active">Profile</a></li>
+      <li><a href="tugas.html">Tugas</a></li>
+      <li><a href="sosmed.html">Sosmed</a></li>
     </ul>
   </nav>
-
-  <div class="hero" id="profile">
+ 
+  <div class="hero">
     <div class="hero-photo-wide"></div>
     <div class="hero-content">
-      <div class="avatar" style="background-image: url('foto-profil.jpg'); background-size: cover; background-position: center;"></div>
+      <div class="avatar"></div>
       <div class="hero-info">
         <h1>Achmad Al Ghifari Noval Nabawi</h1>
         <div class="field"><span class="k">NIM</span><span class="v">: 2412501716</span></div>
@@ -179,37 +114,11 @@
       </div>
     </div>
   </div>
-
-  <section id="tugas">
-    <h2>Tugas &amp; Rangkuman Per Pertemuan</h2>
-    <div class="list">
-
-      <a class="pertemuan" href="pertemuan1.pdf" target="_blank">
-        <div class="p-left">
-          <div class="p-num">1</div>
-          <div>
-            <div class="p-title">Pertemuan 1</div>
-            <div class="p-sub">Rangkuman materi</div>
-          </div>
-        </div>
-        <div class="p-icon">↗</div>
-      </a>
-
-    </div>
-  </section>
-
-  <section id="sosmed">
-    <h2>Sosial Media</h2>
-    <div class="sosmed-list">
-      <a class="sosmed-link" href="https://www.instagram.com/al.ghifarinvl" target="_blank">
-        <span class="sosmed-icon">📷</span> Instagram — @al.ghifarinvl
-      </a>
-    </div>
-  </section>
-
+ 
   <footer>
     &copy; 2026 Achmad Al Ghifari Noval Nabawi
   </footer>
-
+ 
 </body>
 </html>
+ 
