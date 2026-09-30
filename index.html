@@ -3,53 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tugas Cyberpreneurship - Alghifari</title>
+<title>Achmad Al Ghifari Noval Nabawi - Portofolio</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: linear-gradient(135deg, #2b1810, #4a1420);
-    min-height: 100vh;
-    padding: 40px 20px;
+    background: #241209;
     color: #f3e6d8;
   }
-  .container {
-    max-width: 480px;
-    margin: 0 auto;
-  }
-  .header {
-    background: #3a2117;
-    border: 1px solid #5c3a26;
-    border-radius: 16px;
-    padding: 28px 32px;
-    margin-bottom: 20px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-  }
-  .label {
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #d9a679;
-    margin-bottom: 8px;
-  }
-  h1 {
-    font-size: 24px;
-    margin-bottom: 16px;
-    color: #f8ede0;
-  }
-  .info p {
-    font-size: 14px;
-    color: #e3cdb8;
-    margin-bottom: 2px;
-  }
-  .info p strong { color: #f8ede0; }
+  a { color: inherit; }
 
-  h2 {
-    font-size: 15px;
-    color: #d9a679;
-    margin: 0 0 12px 4px;
-    font-weight: 600;
+  /* ===== NAVBAR ===== */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #1c0d06;
+    border-bottom: 1px solid #5c3a26;
   }
+  .logo { font-size: 18px; font-weight: 700; color: #f8ede0; }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    color: #d9a679;
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 4px;
+  }
+  .nav-links a:hover { color: #f8ede0; border-bottom: 2px solid #6b1e2c; }
+
+  /* ===== HERO / PROFILE ===== */
+  .hero {
+    position: relative;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #2b1810, #4a1420);
+    overflow: hidden;
+  }
+  .hero-photo-wide {
+    position: absolute;
+    inset: 0;
+    background: url('foto-background.jpg') center/cover;
+    opacity: 0.35;
+}
+  .hero-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  .avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 16px;
+    background: #6b1e2c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px;
+    font-weight: 700;
+    color: #f8ede0;
+    border: 3px solid #d9a679;
+    flex-shrink: 0;
+  }
+  .hero-info h1 {
+    font-size: 32px;
+    color: #f8ede0;
+    margin-bottom: 20px;
+  }
+  .hero-info .field { display: flex; gap: 8px; margin-bottom: 6px; font-size: 15px; }
+  .hero-info .field .k { color: #d9a679; min-width: 100px; }
+  .hero-info .field .v { color: #f3e6d8; }
+
+  /* ===== SECTIONS ===== */
+  section { max-width: 720px; margin: 0 auto; padding: 60px 20px; }
+  section h2 {
+    font-size: 24px;
+    color: #f8ede0;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  /* Tugas list */
   .list {
     background: #3a2117;
     border: 1px solid #5c3a26;
@@ -82,20 +120,68 @@
   .p-title { font-size: 15px; font-weight: 500; }
   .p-sub { font-size: 12px; color: #c9a68a; margin-top: 2px; }
   .p-icon { font-size: 18px; color: #d9a679; flex-shrink: 0; }
+
+  /* Sosmed */
+  .sosmed-list { display: flex; flex-direction: column; gap: 12px; }
+  .sosmed-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    background: #3a2117;
+    border: 1px solid #5c3a26;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #f3e6d8;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .sosmed-link:hover { border-color: #d9a679; background: #6b1e2c; }
+  .sosmed-icon { font-size: 20px; }
+
+  footer {
+    text-align: center;
+    padding: 30px;
+    color: #8a6a55;
+    font-size: 13px;
+    border-top: 1px solid #3a2117;
+  }
+
+  @media (max-width: 640px) {
+    nav { padding: 16px 20px; flex-direction: column; gap: 12px; }
+    .hero { padding: 40px 20px; }
+    .hero-content { flex-direction: column; text-align: center; }
+    .hero-info .field { justify-content: center; }
+  }
 </style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <div class="label">Tugas Mata Kuliah</div>
-      <h1>Cyberpreneurship</h1>
-      <div class="info">
-        <p><strong>Nama:</strong> Alghifari</p>
-        <p><strong>NIM:</strong> 2412501716</p>
+
+  <nav>
+    <div class="logo">Portofolio</div>
+    <ul class="nav-links">
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#tugas">Tugas</a></li>
+      <li><a href="#sosmed">Sosmed</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero" id="profile">
+    <div class="hero-photo-wide"></div>
+    <div class="hero-content">
+      <div class="avatar">AG</div>
+      <div class="hero-info">
+        <h1>Achmad Al Ghifari Noval Nabawi</h1>
+        <div class="field"><span class="k">NIM</span><span class="v">: 2412501716</span></div>
+        <div class="field"><span class="k">Fakultas</span><span class="v">: Fakultas Teknik Informatika</span></div>
+        <div class="field"><span class="k">Prodi</span><span class="v">: Sistem Informasi</span></div>
+        <div class="field"><span class="k">Universitas</span><span class="v">: Budi Luhur</span></div>
       </div>
     </div>
+  </div>
 
-    <h2>Rangkuman Per Pertemuan</h2>
+  <section id="tugas">
+    <h2>Tugas &amp; Rangkuman Per Pertemuan</h2>
     <div class="list">
 
       <a class="pertemuan" href="pertemuan1.pdf" target="_blank">
@@ -110,6 +196,20 @@
       </a>
 
     </div>
-  </div>
+  </section>
+
+  <section id="sosmed">
+    <h2>Sosial Media</h2>
+    <div class="sosmed-list">
+      <a class="sosmed-link" href="https://www.instagram.com/al.ghifarinvl" target="_blank">
+        <span class="sosmed-icon">📷</span> Instagram — @al.ghifarinvl
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2026 Achmad Al Ghifari Noval Nabawi
+  </footer>
+
 </body>
 </html>
