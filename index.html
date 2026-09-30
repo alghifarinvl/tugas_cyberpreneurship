@@ -74,6 +74,42 @@
   .hero-info .field .k { color: #d9a679; min-width: 100px; }
   .hero-info .field .v { color: #f3e6d8; }
  
+  section { max-width: 720px; margin: 0 auto; padding: 60px 20px; }
+  section h2 {
+    font-size: 24px;
+    color: #f8ede0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .about-text {
+    background: #3a2117;
+    border: 1px solid #5c3a26;
+    border-radius: 16px;
+    padding: 28px 32px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  }
+  .about-text p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #e3cdb8;
+    margin-bottom: 14px;
+  }
+  .about-text p:last-child { margin-bottom: 0; }
+ 
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .gallery img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #5c3a26;
+  }
+ 
   footer {
     text-align: center;
     padding: 30px;
@@ -87,6 +123,7 @@
     .hero { padding: 40px 20px; }
     .hero-content { flex-direction: column; text-align: center; }
     .hero-info .field { justify-content: center; }
+    .gallery { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
 </head>
@@ -114,6 +151,23 @@
       </div>
     </div>
   </div>
+ 
+  <section>
+    <h2>Tentang Saya</h2>
+    <div class="about-text">
+      <p>Nama saya Achmad Al Ghifari Noval Nabawi, saya lahir pada tanggal 20 November 2006. Saat ini saya sedang berkuliah di Universitas Budi Luhur, mengambil Fakultas Teknik Informatika dengan Program Studi Sistem Informasi.</p>
+      <p>Saya gemar sekali mengambil foto random, karena bagi saya memotret hal-hal di sekitar menimbulkan rasa bahagia tersendiri. Setelah mengambil foto, saya biasanya memilah mana yang paling bagus untuk diunggah ke Instagram saya. Di bawah ini adalah beberapa foto yang saya ambil melalui kamera handphone saya.</p>
+    </div>
+ 
+    <!-- ===== GALERI FOTO: ganti src dengan nama file foto kamu ===== -->
+    <div class="gallery">
+      <img src="foto1.jpg" alt="Foto 1">
+      <img src="foto2.jpg" alt="Foto 2">
+      <img src="foto3.jpg" alt="Foto 3">
+      <img src="foto4.jpg" alt="Foto 4">
+    </div>
+    <!-- ===== Tambah lagi: copy baris <img> di atas, ganti src ke nama file baru ===== -->
+  </section>
  
   <footer>
     &copy; 2026 Achmad Al Ghifari Noval Nabawi
