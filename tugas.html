@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tugas - Achmad Al Ghifari Noval Nabawi</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #241209;
+    color: #f3e6d8;
+    min-height: 100vh;
+  }
+  a { color: inherit; }
+ 
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #1c0d06;
+    border-bottom: 1px solid #5c3a26;
+  }
+  .logo { font-size: 18px; font-weight: 700; color: #f8ede0; }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    color: #d9a679;
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 4px;
+  }
+  .nav-links a:hover, .nav-links a.active { color: #f8ede0; border-bottom: 2px solid #6b1e2c; }
+ 
+  section { max-width: 720px; margin: 0 auto; padding: 60px 20px; }
+  section h2 {
+    font-size: 24px;
+    color: #f8ede0;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+ 
+  .list {
+    background: #3a2117;
+    border: 1px solid #5c3a26;
+    border-radius: 16px;
+    padding: 8px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  }
+  .pertemuan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #f3e6d8;
+  }
+  .pertemuan:hover { background: #6b1e2c; }
+  .pertemuan + .pertemuan { border-top: 1px solid #5c3a26; }
+  .p-left { display: flex; align-items: center; gap: 14px; }
+  .p-num {
+    width: 36px; height: 36px;
+    background: #6b1e2c;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 700;
+    color: #f8ede0;
+    flex-shrink: 0;
+  }
+  .p-title { font-size: 15px; font-weight: 500; }
+  .p-sub { font-size: 12px; color: #c9a68a; margin-top: 2px; }
+  .p-icon { font-size: 18px; color: #d9a679; flex-shrink: 0; }
+ 
+  footer {
+    text-align: center;
+    padding: 30px;
+    color: #8a6a55;
+    font-size: 13px;
+    border-top: 1px solid #3a2117;
+  }
+ 
+  @media (max-width: 640px) {
+    nav { padding: 16px 20px; flex-direction: column; gap: 12px; }
+  }
+</style>
+</head>
+<body>
+ 
+  <nav>
+    <div class="logo">Portofolio</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Profile</a></li>
+      <li><a href="tugas.html" class="active">Tugas</a></li>
+      <li><a href="sosmed.html">Sosmed</a></li>
+    </ul>
+  </nav>
+ 
+  <section>
+    <h2>Tugas &amp; Rangkuman Per Pertemuan</h2>
+    <div class="list">
+ 
+      <!-- ===== COPY BLOK DI BAWAH INI UNTUK TAMBAH PERTEMUAN BARU ===== -->
+      <a class="pertemuan" href="pertemuan1.pdf" target="_blank">
+        <div class="p-left">
+          <div class="p-num">1</div>
+          <div>
+            <div class="p-title">Pertemuan 1</div>
+            <div class="p-sub">Rangkuman materi</div>
+          </div>
+        </div>
+        <div class="p-icon">↗</div>
+      </a>
+      <!-- ===== BATAS BLOK ===== -->
+ 
+    </div>
+  </section>
+ 
+  <footer>
+    &copy; 2026 Achmad Al Ghifari Noval Nabawi
+  </footer>
+ 
+</body>
+</html>
+ 
