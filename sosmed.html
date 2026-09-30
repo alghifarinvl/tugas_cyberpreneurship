@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sosmed - Achmad Al Ghifari Noval Nabawi</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #241209;
+    color: #f3e6d8;
+    min-height: 100vh;
+  }
+  a { color: inherit; }
+ 
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #1c0d06;
+    border-bottom: 1px solid #5c3a26;
+  }
+  .logo { font-size: 18px; font-weight: 700; color: #f8ede0; }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    color: #d9a679;
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 4px;
+  }
+  .nav-links a:hover, .nav-links a.active { color: #f8ede0; border-bottom: 2px solid #6b1e2c; }
+ 
+  section { max-width: 720px; margin: 0 auto; padding: 60px 20px; }
+  section h2 {
+    font-size: 24px;
+    color: #f8ede0;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+ 
+  .sosmed-list { display: flex; flex-direction: column; gap: 12px; }
+  .sosmed-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    background: #3a2117;
+    border: 1px solid #5c3a26;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #f3e6d8;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .sosmed-link:hover { border-color: #d9a679; background: #6b1e2c; }
+  .sosmed-icon { font-size: 20px; }
+ 
+  footer {
+    text-align: center;
+    padding: 30px;
+    color: #8a6a55;
+    font-size: 13px;
+    border-top: 1px solid #3a2117;
+  }
+ 
+  @media (max-width: 640px) {
+    nav { padding: 16px 20px; flex-direction: column; gap: 12px; }
+  }
+</style>
+</head>
+<body>
+ 
+  <nav>
+    <div class="logo">Portofolio</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Profile</a></li>
+      <li><a href="tugas.html">Tugas</a></li>
+      <li><a href="sosmed.html" class="active">Sosmed</a></li>
+    </ul>
+  </nav>
+ 
+  <section>
+    <h2>Sosial Media</h2>
+    <div class="sosmed-list">
+      <a class="sosmed-link" href="https://www.instagram.com/al.ghifarinvl" target="_blank">
+        <span class="sosmed-icon">📷</span> Instagram — @al.ghifarinvl
+      </a>
+    </div>
+  </section>
+ 
+  <footer>
+    &copy; 2026 Achmad Al Ghifari Noval Nabawi
+  </footer>
+ 
+</body>
+</html>
+ 
