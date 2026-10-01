@@ -108,6 +108,40 @@
     object-fit: cover;
     border-radius: 12px;
     border: 1px solid #5c3a26;
+    cursor: pointer;
+    transition: transform 0.15s ease, border-color 0.15s ease;
+  }
+  .gallery img:hover {
+    transform: scale(1.03);
+    border-color: #d9a679;
+  }
+ 
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    cursor: zoom-out;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  }
+  .lightbox-close {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    color: #f8ede0;
+    font-size: 32px;
+    cursor: pointer;
+    line-height: 1;
   }
  
   footer {
@@ -161,19 +195,34 @@
  
     <!-- ===== GALERI FOTO: ganti src dengan nama file foto kamu ===== -->
     <div class="gallery">
-      <img src="foto1.jpg" alt="Foto 1">
-      <img src="foto2.jpg" alt="Foto 2">
-      <img src="foto3.jpg" alt="Foto 3">
-      <img src="foto4.jpg" alt="Foto 4">
-      <img src="foto5.jpg" alt="Foto 5">
-      <img src="foto6.jpg" alt="Foto 6">
+      <img src="foto1.jpg" alt="Foto 1" onclick="openLightbox('foto1.jpg')">
+      <img src="foto2.jpg" alt="Foto 2" onclick="openLightbox('foto2.jpg')">
+      <img src="foto3.jpg" alt="Foto 3" onclick="openLightbox('foto3.jpg')">
+      <img src="foto4.jpg" alt="Foto 4" onclick="openLightbox('foto4.jpg')">
+      <img src="foto5.jpg" alt="Foto 5" onclick="openLightbox('foto5.jpg')">
+      <img src="foto6.jpg" alt="Foto 6" onclick="openLightbox('foto6.jpg')">
     </div>
-    <!-- ===== Tambah lagi: copy baris <img> di atas, ganti src ke nama file baru ===== -->
+    <!-- ===== Tambah lagi: copy baris <img> di atas, ganti src DAN onclick ke nama file baru ===== -->
   </section>
+ 
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="Foto diperbesar">
+  </div>
  
   <footer>
     &copy; 2026 Achmad Al Ghifari Noval Nabawi
   </footer>
+ 
+  <script>
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('open');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+    }
+  </script>
  
 </body>
 </html>
