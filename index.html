@@ -13,7 +13,7 @@
     min-height: 100vh;
   }
   a { color: inherit; }
-
+ 
   nav {
     display: flex;
     align-items: center;
@@ -32,7 +32,7 @@
     padding-bottom: 4px;
   }
   .nav-links a:hover, .nav-links a.active { color: #f8ede0; border-bottom: 2px solid #6b1e2c; }
-
+ 
   .hero {
     position: relative;
     padding: 60px 40px;
@@ -73,7 +73,7 @@
   .hero-info .field { display: flex; gap: 8px; margin-bottom: 6px; font-size: 15px; }
   .hero-info .field .k { color: #d9a679; min-width: 100px; }
   .hero-info .field .v { color: #f3e6d8; }
-
+ 
   section { max-width: 720px; margin: 0 auto; padding: 60px 20px; }
   section h2 {
     font-size: 24px;
@@ -95,7 +95,7 @@
     margin-bottom: 14px;
   }
   .about-text p:last-child { margin-bottom: 0; }
-
+ 
   .edu-list { display: flex; flex-direction: column; gap: 0; }
   .edu-item {
     display: flex;
@@ -111,7 +111,7 @@
     flex-shrink: 0;
   }
   .edu-sekolah { font-size: 15px; color: #f3e6d8; }
-
+ 
   .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -131,7 +131,7 @@
     transform: scale(1.03);
     border-color: #d9a679;
   }
-
+ 
   .lightbox {
     display: none;
     position: fixed;
@@ -159,7 +159,7 @@
     cursor: pointer;
     line-height: 1;
   }
-
+ 
   footer {
     text-align: center;
     padding: 30px;
@@ -167,7 +167,7 @@
     font-size: 13px;
     border-top: 1px solid #3a2117;
   }
-
+ 
   @media (max-width: 640px) {
     nav { padding: 16px 20px; flex-direction: column; gap: 12px; }
     .hero { padding: 40px 20px; }
@@ -178,16 +178,17 @@
 </style>
 </head>
 <body>
-
+ 
   <nav>
     <div class="logo">Portofolio</div>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Profile</a></li>
       <li><a href="tugas.html">Tugas</a></li>
+      <li><a href="produk.html">Produk</a></li>
       <li><a href="sosmed.html">Sosmed</a></li>
     </ul>
   </nav>
-
+ 
   <div class="hero">
     <div class="hero-photo-wide"></div>
     <div class="hero-content">
@@ -201,14 +202,14 @@
       </div>
     </div>
   </div>
-
+ 
   <section>
     <h2>Tentang Saya</h2>
     <div class="about-text">
       <p>Nama saya Achmad Al Ghifari Noval Nabawi, saya lahir pada tanggal 20 November 2006. Saat ini saya sedang berkuliah di Universitas Budi Luhur, mengambil Fakultas Teknik Informatika dengan Program Studi Sistem Informasi.</p>
       <p>Saya gemar sekali mengambil foto random, karena bagi saya memotret hal-hal di sekitar menimbulkan rasa bahagia tersendiri. Setelah mengambil foto, saya biasanya memilah mana yang paling bagus untuk diunggah ke Instagram saya. Di bawah ini adalah beberapa foto yang saya ambil melalui kamera handphone saya.</p>
     </div>
-
+ 
     <!-- ===== GALERI FOTO: ganti src dengan nama file foto kamu ===== -->
     <div class="gallery">
       <img src="foto1.jpg" alt="Foto 1" onclick="openLightbox('foto1.jpg')">
@@ -220,7 +221,7 @@
     </div>
     <!-- ===== Tambah lagi: copy baris <img> di atas, ganti src DAN onclick ke nama file baru ===== -->
   </section>
-
+ 
   <section>
     <h2>Latar Belakang Pendidikan</h2>
     <div class="about-text edu-list">
@@ -238,16 +239,16 @@
       </div>
     </div>
   </section>
-
+ 
   <div class="lightbox" id="lightbox" onclick="closeLightbox()">
     <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
     <img id="lightbox-img" src="" alt="Foto diperbesar">
   </div>
-
+ 
   <footer>
     &copy; 2026 Achmad Al Ghifari Noval Nabawi
   </footer>
-
+ 
   <script>
     function openLightbox(src) {
       document.getElementById('lightbox-img').src = src;
@@ -257,6 +258,7 @@
       document.getElementById('lightbox').classList.remove('open');
     }
   </script>
-
+ 
 </body>
 </html>
+ 
