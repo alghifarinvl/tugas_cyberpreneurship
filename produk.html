@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Veterano Shirt - Novera Store</title>
+<title>Produk - Achmad Al Ghifari Noval Nabawi</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -33,158 +33,60 @@
   }
   .nav-links a:hover, .nav-links a.active { color: #f8ede0; border-bottom: 2px solid #6b1e2c; }
 
-  .page-head {
-    padding: 50px 20px 44px;
-    text-align: center;
+  .page-banner {
+    position: relative;
+    padding: 70px 40px;
     background: linear-gradient(135deg, #2b1810, #4a1420);
+    overflow: hidden;
+    text-align: center;
   }
-  .brand-badge {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #d9a679;
-    border: 1px solid #d9a679;
-    border-radius: 999px;
-    padding: 6px 16px;
-    margin-bottom: 14px;
+  .page-banner-photo {
+    position: absolute;
+    inset: 0;
+    background: url('foto-backround.jpg') center/cover;
+    opacity: 0.35;
   }
-  .page-head h1 { font-size: 34px; color: #f8ede0; margin-bottom: 10px; }
-  .page-head p { font-size: 15px; color: #e3cdb8; max-width: 520px; margin: 0 auto; line-height: 1.7; }
+  .page-banner h1 { position: relative; font-size: 30px; color: #f8ede0; }
 
-  section { max-width: 760px; margin: 0 auto; padding: 50px 20px; }
+  section { max-width: 900px; margin: 0 auto; padding: 40px 20px 60px; }
 
-  .card {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .produk {
     background: #3a2117;
     border: 1px solid #5c3a26;
     border-radius: 16px;
-    padding: 28px 32px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-  }
-  .card .toko { font-size: 13px; color: #d9a679; font-weight: 600; margin-bottom: 6px; }
-  .card h2 { font-size: 26px; color: #f8ede0; margin-bottom: 16px; text-align: left; }
-  .tagline { font-size: 15px; font-weight: 600; color: #f3e6d8; line-height: 1.6; margin-bottom: 14px; }
-  .card p { font-size: 14px; line-height: 1.8; color: #e3cdb8; margin-bottom: 12px; }
-
-  .card h3 { font-size: 15px; color: #f8ede0; margin: 20px 0 10px; }
-  .keunggulan { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-  .keunggulan li {
-    position: relative;
-    padding-left: 24px;
-    font-size: 14px;
-    line-height: 1.6;
-    color: #e3cdb8;
-  }
-  .keunggulan li::before {
-    content: "\2713";
-    position: absolute;
-    left: 0;
-    color: #d9a679;
-    font-weight: 700;
-  }
-
-  .slogan {
-    margin-top: 22px;
-    padding-top: 18px;
-    border-top: 1px solid #5c3a26;
-    font-size: 13px;
-    font-style: italic;
-    color: #d9a679;
-    text-align: center;
-  }
-
-  .foto-judul {
-    margin-top: 36px;
-    text-align: center;
-    font-size: 14px;
-    color: #d9a679;
-    font-weight: 600;
-  }
-  .foto-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-    margin-top: 14px;
-  }
-  .foto-link {
-    position: relative;
-    display: block;
-    text-decoration: none;
-    border-radius: 16px;
     overflow: hidden;
-    transition: transform 0.15s ease;
-  }
-  .foto-link:hover { transform: scale(1.02); }
-  .foto-link img {
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
-    display: block;
-    border-radius: 16px;
-    border: 1px solid #5c3a26;
-    background: #2b1810;
-  }
-  .foto-link::after {
-    content: "Klik untuk pesan via WhatsApp";
-    position: absolute;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    text-align: center;
-    background: rgba(107, 30, 44, 0.92);
-    color: #f8ede0;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 9px 10px;
-    border-radius: 8px;
-  }
-
-  .foto-placeholder {
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    border-radius: 16px;
-    border: 2px dashed #8a6a55;
-    background: #2b1810;
-    color: #d9a679;
-    font-size: 14px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    line-height: 1.5;
   }
-  .foto-placeholder small { color: #8a6a55; font-size: 12px; }
-  .foto-placeholder b { color: #f8ede0; }
-
-  .btn-pesan {
-    margin-top: 28px;
+  .produk img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    background: #5c3a26;
+  }
+  .produk-body { padding: 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+  .produk-nama { font-size: 16px; font-weight: 600; color: #f8ede0; }
+  .produk-harga { font-size: 15px; color: #d9a679; font-weight: 700; }
+  .produk-desc { font-size: 13px; color: #c9a68a; line-height: 1.5; }
+  .btn-beli {
+    margin-top: auto;
     display: block;
     text-align: center;
     text-decoration: none;
     background: #6b1e2c;
     color: #f8ede0;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 14px 20px;
+    padding: 10px;
     border-radius: 10px;
-    border: 1px solid #8a2a3c;
-    transition: background 0.15s ease;
+    font-size: 14px;
+    font-weight: 600;
   }
-  .btn-pesan:hover { background: #8a2a3c; }
-
-  .cara-order {
-    margin-top: 32px;
-    background: #3a2117;
-    border: 1px solid #5c3a26;
-    border-radius: 16px;
-    padding: 24px 32px;
-  }
-  .cara-order h2 { font-size: 20px; color: #f8ede0; margin-bottom: 12px; text-align: left; }
-  .cara-order ol { padding-left: 20px; font-size: 14px; line-height: 1.9; color: #e3cdb8; }
+  .btn-beli:hover { background: #8a2a3c; }
 
   footer {
     text-align: center;
@@ -194,10 +96,15 @@
     border-top: 1px solid #3a2117;
   }
 
+  @media (max-width: 760px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+  }
   @media (max-width: 640px) {
     nav { padding: 16px 20px; flex-direction: column; gap: 12px; }
-    .card { padding: 24px 22px; }
-    .page-head h1 { font-size: 28px; }
+    .page-banner { padding: 50px 20px; }
+  }
+  @media (max-width: 420px) {
+    .grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -213,92 +120,52 @@
     </ul>
   </nav>
 
-  <div class="page-head">
-    <span class="brand-badge">Novera Store</span>
-    <h1>Veterano Shirt</h1>
-    <p>Vintage Style, Everyday Comfort.</p>
+  <div class="page-banner">
+    <div class="page-banner-photo"></div>
+    <h1>Produk</h1>
   </div>
 
   <section>
+    <div class="grid">
 
-    <!-- ===== DESKRIPSI ===== -->
-    <div class="card">
-      <div class="toko">Novera Store</div>
-      <h2>Veterano Shirt </h2>
+      <!-- ===== COPY BLOK DI BAWAH INI UNTUK TAMBAH PRODUK BARU ===== -->
+      <div class="produk">
+        <img src="produk1.jpg" alt="Produk 1">
+        <div class="produk-body">
+          <div class="produk-nama">Nama Produk 1</div>
+          <div class="produk-harga">Rp 0</div>
+          <div class="produk-desc">Deskripsi singkat produk.</div>
+          <a class="btn-beli" href="https://wa.me/6285697728172?text=Halo%2C%20saya%20mau%20pesan%20Nama%20Produk%201" target="_blank">Pesan via WhatsApp</a>
+        </div>
+      </div>
+      <!-- ===== BATAS BLOK ===== -->
 
-      <p class="tagline">Tampil stylish dengan sentuhan vintage yang tetap nyaman untuk aktivitas sehari-hari.</p>
-      <p>Veterano Shirt hadir dengan motif khas yang memberikan kesan retro, berkelas, dan effortless. Dibuat menggunakan bahan yang ringan, adem, dan nyaman dipakai, sehingga cocok untuk menghadapi cuaca panas dan aktivitas di Indonesia.</p>
-      <p>Potongannya dirancang agar tetap terlihat rapi namun tidak terasa kaku, membuatnya mudah dipadukan dengan jeans, chino, maupun celana bahan.</p>
+      <div class="produk">
+        <img src="produk2.jpg" alt="Produk 2">
+        <div class="produk-body">
+          <div class="produk-nama">Nama Produk 2</div>
+          <div class="produk-harga">Rp 0</div>
+          <div class="produk-desc">Deskripsi singkat produk.</div>
+          <a class="btn-beli" href="https://wa.me/6285697728172?text=Halo%2C%20saya%20mau%20pesan%20Nama%20Produk%202" target="_blank">Pesan via WhatsApp</a>
+        </div>
+      </div>
 
-      <h3>Keunggulan</h3>
-      <ul class="keunggulan">
-        <li>Bahan ringan dan adem</li>
-        <li>Nyaman digunakan di cuaca panas</li>
-        <li>Motif vintage yang unik dan stylish</li>
-        <li>Cutting nyaman untuk aktivitas sehari-hari</li>
-        <li>Mudah dipadukan dengan berbagai outfit</li>
-        <li>Cocok untuk casual, nongkrong, jalan-jalan, maupun hangout</li>
-      </ul>
+      <div class="produk">
+        <img src="produk3.jpg" alt="Produk 3">
+        <div class="produk-body">
+          <div class="produk-nama">Nama Produk 3</div>
+          <div class="produk-harga">Rp 0</div>
+          <div class="produk-desc">Deskripsi singkat produk.</div>
+          <a class="btn-beli" href="https://wa.me/6285697728172?text=Halo%2C%20saya%20mau%20pesan%20Nama%20Produk%203" target="_blank">Pesan via WhatsApp</a>
+        </div>
+      </div>
 
-      <div class="slogan">Novera Store — Vintage Style, Everyday Comfort.</div>
-    </div>
-
-    <!-- ===== FOTO PRODUK: simpan sebagai produk1.jpg dan produk2.jpg =====
-         Foto-foto ini bisa diklik dan langsung membuka WhatsApp. -->
-    <div class="foto-judul">Klik foto produk untuk langsung memesan</div>
-    <div class="foto-grid">
-      <a class="foto-link" data-wa target="_blank" rel="noopener">
-        <img src="produk1.jpg" alt="Veterano Shirt - foto 1">
-      </a>
-      <a class="foto-link" data-wa target="_blank" rel="noopener">
-        <img src="produk2.jpg" alt="Veterano Shirt - foto 2">
-      </a>
-    </div>
-
-    <a class="btn-pesan" data-wa target="_blank" rel="noopener">Pesan via WhatsApp</a>
-
-    <div class="cara-order">
-      <h2>Cara Pemesanan</h2>
-      <ol>
-        <li>Klik foto produk atau tombol <b>Pesan via WhatsApp</b>.</li>
-        <li>Kirim pesan beserta ukuran dan jumlah yang kamu mau.</li>
-        <li>Saya konfirmasi stok, ongkir, dan metode pembayaran.</li>
-        <li>Pesanan dikirim setelah pembayaran diterima.</li>
-      </ol>
     </div>
   </section>
 
   <footer>
     &copy; 2026 Achmad Al Ghifari Noval Nabawi
   </footer>
-
-  <script>
-    // ===== GANTI NOMOR WHATSAPP DI SINI SAJA (format 628xxxxxxxxxx, tanpa 0 di depan) =====
-    var NOMOR_WA = "628XXXXXXXXXX";
-    var PESAN_WA = "Halo Novera Store, saya mau pesan Veterano Shirt";
-
-    var linkWA = "https://wa.me/" + NOMOR_WA + "?text=" + encodeURIComponent(PESAN_WA);
-    document.querySelectorAll('[data-wa]').forEach(function (a) {
-      a.href = linkWA;
-    });
-
-    // Kalau foto belum ada, tampilkan kotak placeholder yang menunjukkan nama file-nya
-    document.querySelectorAll('img').forEach(function (img) {
-      img.addEventListener('error', function () {
-        var nama = (img.getAttribute('src') || '').split('/').pop();
-        var box = document.createElement('div');
-        box.className = 'foto-placeholder';
-        var t1 = document.createElement('span');
-        t1.textContent = 'Taruh foto di sini';
-        var t2 = document.createElement('small');
-        t2.innerHTML = 'simpan sebagai <b></b>';
-        t2.querySelector('b').textContent = nama;
-        box.appendChild(t1);
-        box.appendChild(t2);
-        img.replaceWith(box);
-      });
-    });
-  </script>
 
 </body>
 </html>
