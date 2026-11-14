@@ -39,6 +39,9 @@
     background: linear-gradient(135deg, #2b1810, #4a1420);
     overflow: hidden;
     min-height: calc(100vh - 73px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .hero-photo-wide {
     position: absolute;
@@ -49,15 +52,16 @@
   .hero-content {
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 40px;
+    text-align: center;
+    gap: 24px;
     max-width: 900px;
     margin: 0 auto;
-    flex-wrap: wrap;
   }
   .avatar {
-    width: 160px;
-    height: 160px;
+    width: 180px;
+    height: 180px;
     border-radius: 16px;
     background-image: url('foto-profil.jpg');
     background-size: cover;
@@ -69,6 +73,10 @@
     font-size: 32px;
     color: #f8ede0;
     margin-bottom: 20px;
+  }
+  .hero-info .fields {
+    display: inline-block;
+    text-align: left;
   }
   .hero-info .field { display: flex; gap: 8px; margin-bottom: 6px; font-size: 15px; }
   .hero-info .field .k { color: #d9a679; min-width: 100px; }
@@ -171,8 +179,7 @@
   @media (max-width: 640px) {
     nav { padding: 16px 20px; flex-direction: column; gap: 12px; }
     .hero { padding: 40px 20px; }
-    .hero-content { flex-direction: column; text-align: center; }
-    .hero-info .field { justify-content: center; }
+    .hero-info h1 { font-size: 26px; }
     .gallery { grid-template-columns: repeat(2, 1fr); }
   }
 </style>
@@ -196,10 +203,12 @@
       <div class="avatar"></div>
       <div class="hero-info">
         <h1>Achmad Al Ghifari Noval Nabawi</h1>
-        <div class="field"><span class="k">NIM</span><span class="v">: 2412501716</span></div>
-        <div class="field"><span class="k">Fakultas</span><span class="v">: Fakultas Teknik Informatika</span></div>
-        <div class="field"><span class="k">Prodi</span><span class="v">: Sistem Informasi</span></div>
-        <div class="field"><span class="k">Universitas</span><span class="v">: Budi Luhur</span></div>
+        <div class="fields">
+          <div class="field"><span class="k">NIM</span><span class="v">: 2412501716</span></div>
+          <div class="field"><span class="k">Fakultas</span><span class="v">: Fakultas Teknik Informatika</span></div>
+          <div class="field"><span class="k">Prodi</span><span class="v">: Sistem Informasi</span></div>
+          <div class="field"><span class="k">Universitas</span><span class="v">: Budi Luhur</span></div>
+        </div>
       </div>
     </div>
   </div>
